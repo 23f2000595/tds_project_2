@@ -1,0 +1,7 @@
+print("CURRENT ISSUE: CSV question expects sum calculation, not cutoff extraction")
+print("")
+print("The question 'CSV file Cutoff:' might be misleading")
+print("Server says: 'Wrong sum of numbers'")
+print("")
+print("SOLUTION: Need to actually download the CSV and calculate the sum")
+print("of the numbers in the file, not extract cutoff from question text")
