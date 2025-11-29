@@ -159,3 +159,7 @@ async def shutdown_event():
     await scraper.close()
     await data_processor.close()
     await answer_submitter.close()
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy", "message": "API is running"}
+

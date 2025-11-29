@@ -22,7 +22,7 @@ class WebScraper:
             html_content = response.text
             
             # Only use Selenium if absolutely necessary
-            if self._definitely_needs_js(html_content):
+            if self._definitely_needs_js(html_content) or "document.querySelector" in html_content or "innerHTML" in html_content or "atob(" in html_content:
                 logger.info("Page definitely needs JavaScript rendering")
                 return await self._scrape_with_selenium_fast(url)
             else:
